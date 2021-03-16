@@ -8,7 +8,6 @@ use tai64::TAI64N;
 #[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct WasmiumManifestBody<'wm> {
     profile: WasmiumProfile,
-    account: Option<PublicKey>,
     issue: TAI64N,
     lease: WasmiumLease,
     #[serde(borrow)]
@@ -22,7 +21,6 @@ impl<'wm> Default for WasmiumManifestBody<'wm> {
 
         Self {
             profile: WasmiumProfile::Development,
-            account: Option::default(),
             issue: time_now,
             lease: WasmiumLease::Expiry(time_now),
             cap: Vec::default(),
@@ -34,12 +32,6 @@ impl<'wm> Default for WasmiumManifestBody<'wm> {
 impl<'wm> WasmiumManifestBody<'wm> {
     pub fn change_profile(&mut self, value: WasmiumProfile) -> &mut Self {
         self.profile = value;
-
-        self
-    }
-
-    pub fn add_account(&mut self, value: PublicKey) -> &mut Self {
-        self.account = Some(value);
 
         self
     }
