@@ -1,0 +1,34 @@
+[tasks.build_dev]
+description = "Build wasm32-wasi binary"
+install_crate = "cargo-wasi"
+command = "cargo"
+args = ["wasi", "build"]
+watch = { ignore_pattern = "../target" }
+
+[tasks.build_release]
+description = "Build wasm32-wasi binary"
+install_crate = "cargo-wasi"
+command = "cargo"
+args = ["wasi", "build", "--release"]
+watch = { ignore_pattern = "../target" }
+
+[tasks.run_dev]
+description = "Build wasm32-wasi binary"
+install_crate = "cargo-wasi"
+command = "cargo"
+args = ["wasi", "run"]
+dependencies = ["build_dev"]
+
+[tasks.run_release]
+description = "Build wasm32-wasi binary"
+install_crate = "cargo-wasi"
+command = "cargo"
+args = ["wasi", "run", "--release"]
+watch = { ignore_pattern = "../target" }
+dependencies = ["build_release"]
+
+[tasks.format]
+description = "Format Code with cargo-fmt"
+install_crate = "rustfmt"
+command = "cargo"
+args = ["fmt", "--all"]

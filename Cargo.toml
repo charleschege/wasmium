@@ -2,4 +2,5 @@
 members = [
 	"wasmium",
 	"wasmium-control",
+	"wasmium-security",
 ]
