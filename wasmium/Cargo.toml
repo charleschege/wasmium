@@ -3,3 +3,12 @@ name = "wasmium"
 version = "0.1.0-alpha.1"
 authors = ["Charles Chege <charleschege@protonmail.ch>"]
 edition = "2018"
+homepage = "https://github.com/charleschege/wasmium"
+repository = "https://github.com/charleschege/wasmium"
+license = "Apache-2.0"
+keywords = ["wasm", "webassembly", "containers", "serverless"]
+categories = ["Network programming", "WebAssembly"]
+#readme = "README.md"
+
+[badges]
+maintenance = { status = "actively-developed" }
