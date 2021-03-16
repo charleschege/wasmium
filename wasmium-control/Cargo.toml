@@ -1,6 +1,6 @@
 [package]
 name = "wasmium-control"
-version = "0.1.0"
+version = "0.1.0-alpha.1"
 authors = ["Charles Chege <charleschege@protonmail.ch>"]
 edition = "2018"
 
