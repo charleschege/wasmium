@@ -9,6 +9,7 @@ license = "Apache-2.0"
 keywords = ["wasm", "webassembly", "containers", "serverless"]
 categories = ["Network programming", "WebAssembly"]
 #readme = "README.md"
+description = "Run webassembly modules safely"
 
 [badges]
 maintenance = { status = "actively-developed" }
