@@ -2,10 +2,6 @@
 /// WasmiumHash(profile | account | issued | expiry | WasmiumLease | CapabilitiesLength | wasm module)
 
 /// To access the database path, the challange is to sign the account hash with its public key
-use ed25519_dalek::{Keypair, PublicKey, Signature, Signer};
-use rand::rngs::OsRng;
-use tai64::TAI64N;
-
 mod global;
 pub use global::*;
 mod manifest_body;
